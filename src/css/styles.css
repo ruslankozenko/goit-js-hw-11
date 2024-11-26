@@ -24,6 +24,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 371px;
+  display: flex;
 }
 
 input {
@@ -42,11 +43,9 @@ button {
   padding: 8px 16px;
   height: 40px;
   max-width: 80px;
-
   font-weight: 500;
   font-size: 16px;
   color: #fff;
-
   border-radius: 8px;
   background-color: #4e75ff;
   border: none;
@@ -56,8 +55,69 @@ button:hover {
   background: #6c8cff;
 }
 
+.gallery {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  margin: 24px auto;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 72px) / 4);
+  border: #808080 1px solid;
+}
+
+img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.img-dscr {
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.img-dscr li {
+  text-align: center;
+}
 
 
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 80%;
+  z-index: 9999;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border: 6px solid #e3eb0a;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
 
+.loader.is-open {
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
