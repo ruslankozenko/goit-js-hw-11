@@ -7,8 +7,6 @@ import { createMarkUp } from "./js/render-function";
 import { galleryEl } from "./js/render-function";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 const formEl = document.querySelector(".form");
 const inputEl = document.querySelector("input");
@@ -47,9 +45,5 @@ formEl.addEventListener("submit", event => {
     inputEl.value = "";
 });
 
-const lightbox = new SimpleLightbox(".gallery-link", {
-    captionsData: "alt",
-    captionDelay: 250,
-});
 
 
