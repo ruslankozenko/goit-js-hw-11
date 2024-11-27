@@ -42,6 +42,9 @@ export function createMarkUp(images) {
 
   galleryEl.insertAdjacentHTML("beforeend", markUp);
 
-  lightbox.refresh();
+  const allGalleryLinks = document.querySelectorAll(".gallery-link");
+  if (allGalleryLinks.length > 0) {
+    lightbox.refresh();
+  }
 
 }
